@@ -122,8 +122,6 @@ plt.plot(history.history['val_loss'])
 #%%
 X_pred = Conv2DAuto.predict(X_test)
 
-#%%
-
 
 
 
