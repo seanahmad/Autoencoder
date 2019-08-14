@@ -1,6 +1,5 @@
 # Autoencoder
 
-
 The goal of this project is to achieve dimension reduction. Autoencoder is usually used to do dimension reduction and feature extraction. 
   
 The data I used is the intraday data with 1440 minutes(rows). Each row in the time series data is a price. The objective is to reduce this 1440 dimension series into a lower dimension. The target I achieved is a (5, 8) matrix. Flattened, it is a 40 dimension series.
@@ -27,7 +26,7 @@ Below are some comparision between the original input and the reproduce output
 ![](https://raw.githubusercontent.com/VictorXXXXX/Autoencoder/master/images/result5.png)
 ![](https://raw.githubusercontent.com/VictorXXXXX/Autoencoder/master/images/result6.png)
 
-### how the Codings look like?
+### How the codings looks like?
 After training the model to finish the reconstruction task, I cut the decoder and used the encoder to fit the test data into lower dimension codings. Below is the correlation plot of the codings.
 
 ![](https://raw.githubusercontent.com/VictorXXXXX/Autoencoder/master/images/corr.png)
