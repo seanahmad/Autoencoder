@@ -14,7 +14,7 @@ All the architectures are built with __Tensorflow__ and __Keras__.
 
 This architecture is a combination of convolutional layers and autoencoder. Keras has a type of convolutional layer called `Conv1D` used to deal with sequence data. A Conv1D layer has different filters and it applies these different filters upon the sequence data, with the filters sliding along the sequence data. It works in a similar way with the common `Conv2D`. 
   
-Firstly, the encoder with a bunch of `Conv1D` layers and `MaxPooling1D` layers compresses the 1440 dimension sequence into an abstract array of dimension `(5,8)`. Secondly, the decoder with another symmetrical bunch of `Upsampling1D` layers and `Conv1D` layers to do reconstruction.
+Firstly, the encoder with a bunch of `Conv1D` layers and `MaxPooling1D` layers compresses the 1440 dimension sequence into an abstract array of dimension `(5,8)`. Secondly, the decoder with another symmetrical bunch of `Upsampling1D` layers and `Conv1D` layers to do reconstruction. More technical details about how to build up the architecture refer to the latest Jupyter notebook file named `Conv1DAuto_V4_daySession.ipynb` above.
 
 ### How the reproduce looks like?
 Below are some comparision between the original input and the reproduce output
