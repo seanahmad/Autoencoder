@@ -1,4 +1,4 @@
-# Autoencoder
+# Autoencoder & Dimension Reduction
 
 The goal of this project is to achieve dimension reduction. Autoencoder is usually used to do dimension reduction and feature extraction. 
   
