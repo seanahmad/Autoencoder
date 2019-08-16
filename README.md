@@ -2,10 +2,10 @@
 
 The goal of this project is to achieve dimension reduction. Autoencoder is usually used to do dimension reduction and feature extraction. 
   
-The data I used is the intraday data with 1440 minutes(rows). Each row in the time series data is a price. The objective is to reduce this 1440 dimension series into a lower dimension. The target I achieved is a (5, 8) matrix. Flattened, it is a 40 dimension series.
+The data I used is the intraday data with 1440 minutes(rows). Each row in the time series data is a price. To eliminate the noise overnight, only the day session from market open to close is used. The symbol I used in the demo is GC(gold futures). It has 300 minutes during the daytime trading. The objective is to reduce this 300 dimension series into a lower dimension. The target I achieved is a (5, 8) matrix. Flattened, it is a 40 dimension series.
 
 The repository include:  
-An autoencoder architecture with convolutional neural network to do dimension reduction <a href="https://gqhuang.com/auto-4/">Conv-Auto</a>  
+An autoencoder architecture with convolutional neural network to do dimension reduction. <a href="https://gqhuang.com/auto-4/">Conv-Auto</a> Here is included the details about how it works.  
 An autoencoder architecture with recurrent neural network to do feature extraction <a href="https://gqhuang.com/auto-3/">Auto-LSTM</a>  
 
 All the architectures are built with __Tensorflow__ and __Keras__.
@@ -14,9 +14,9 @@ All the architectures are built with __Tensorflow__ and __Keras__.
 
 This architecture is a combination of convolutional layers and autoencoder. Keras has a type of convolutional layer called `Conv1D` used to deal with sequence data. A Conv1D layer has different filters and it applies these different filters upon the sequence data, with the filters sliding along the sequence data. It works in a similar way with the common `Conv2D`. 
   
-Firstly, the encoder with a bunch of `Conv1D` layers and `MaxPooling1D` layers compresses the 1440 dimension sequence into an abstract array of dimension `(5,8)`. Secondly, the decoder with another symmetrical bunch of `Upsampling1D` layers and `Conv1D` layers to do reconstruction. 
+Firstly, the encoder with 4 `Conv1D` layers, each followed by a `Maxpooling1D` layer, compresses the 300 dimension sequence into an abstract array of dimension `(5,8)`. Secondly, the decoder with another 4 symmetrical `Conv1D` layers, each followed by a `Upsampling1D` layer, reconstruct the original input from the compressed array.
 
-More technical details about how to build up the architecture refer to the latest Jupyter notebook file named `Conv1DAuto_V4_daySession.ipynb` above.
+More technical details about how to build up the architecture refer to the latest Jupyter Notebook file named `Conv1DAuto_V4_daySession.ipynb` above.
 
 ### How the reproduce looks like?
 Below are some comparision between the original input and the reproduce output
