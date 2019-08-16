@@ -11,11 +11,11 @@ An autoencoder architecture with convolutional neural network to do dimension re
 An autoencoder architecture with recurrent neural network to do feature extraction.  
 <a href="https://gqhuang.com/auto-3/">Auto-LSTM</a> Here is included the details about how it works.  
 
-All the architectures are built with __Tensorflow__ and __Keras__.
+All the architectures are built with __*TensorFlow*__ and __*Keras*__.
 
 ## Convolutional-Autoencoder
 
-This architecture is a combination of convolutional layers and autoencoder. Keras has a type of convolutional layer called `Conv1D` used to deal with sequence data. A Conv1D layer has different filters and it applies these different filters upon the sequence data, with the filters sliding along the sequence data. It works in a similar way with the common `Conv2D`. 
+This architecture is a combination of convolutional layers and autoencoder. Keras has a type of convolutional layer called `Conv1D` used to deal with sequence data. A `Conv1D` layer has different filters and it applies these different filters upon the sequence data, with the filters sliding along the sequence data. It works in a similar way with the common `Conv2D`. 
   
 Firstly, the encoder with 4 `Conv1D` layers, each followed by a `Maxpooling1D` layer, compresses the 300 dimension sequence into an abstract array of dimension `(5,8)`. Secondly, the decoder with another 4 symmetrical `Conv1D` layers, each followed by a `Upsampling1D` layer, reconstruct the original input from the compressed array.
 
