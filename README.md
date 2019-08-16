@@ -5,8 +5,11 @@ The goal of this project is to achieve dimension reduction. Autoencoder is usual
 The data I used is the intraday data with 1440 minutes(rows). Each row in the time series data is a price. To eliminate the noise overnight, only the day session from market open to close is used. The symbol I used in the demo is GC(gold futures). It has 300 minutes during the daytime trading. The objective is to reduce this 300 dimension series into a lower dimension. The target I achieved is a (5, 8) matrix. Flattened, it is a 40 dimension series.
 
 The repository include:  
-An autoencoder architecture with convolutional neural network to do dimension reduction. <a href="https://gqhuang.com/auto-4/">Conv-Auto</a> Here is included the details about how it works.  
-An autoencoder architecture with recurrent neural network to do feature extraction <a href="https://gqhuang.com/auto-3/">Auto-LSTM</a>  
+An autoencoder architecture with convolutional neural network to do dimension reduction.  
+<a href="https://gqhuang.com/auto-4/">Conv-Auto</a> Here is included the details about how it works.  
+
+An autoencoder architecture with recurrent neural network to do feature extraction.  
+<a href="https://gqhuang.com/auto-3/">Auto-LSTM</a> Here is included the details about how it works.  
 
 All the architectures are built with __Tensorflow__ and __Keras__.
 
