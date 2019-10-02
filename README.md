@@ -34,9 +34,9 @@ Below are some comparision between the original input and the reproduce output
 ### How the codings looks like?
 After training the model to finish the reconstruction task, I cut the decoder and used the encoder to fit the test data into lower dimension codings. Below is the correlation plot of the codings.
 
-![](https://raw.githubusercontent.com/VictorXXXXX/Autoencoder/master/images/corr.png)
+![](https://github.com/VictorXXXXX/Autoencoder/blob/master/images/corr.png)
 
-
+https://raw.githubusercontent.com/VictorXXXXX/Autoencoder/master/images/corr.png
 ## LSTM-Autoencoder
 
 This architecture is the first one I try to use to do dimension reduction on sequence data. The main reason I used LSTM in an autoencoder is that LSTM is capable of capturing time dependent features and patterns. But I failed to finish the compression goal, because as I learned more about LSTM, I found that when combined with autoencoder, it could not compress the sequence dimension. It only deals with the features size. In other words, everytime you pass a timestep into LSTM, you got a timestep out. The dimension of timestep does not change at all. But it may still be useful. It may be able to be used to do feature extraction. Say, you now have a sequence of data with 5 features. Passed into the encoder, the data is expanded into a larger dimension, with 10 features. 
