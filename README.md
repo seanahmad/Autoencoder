@@ -24,17 +24,17 @@ More technical details about how to build up the architecture refer to the lates
 ### How the reproduce looks like?
 Below are some comparision between the original input and the reproduce output
 
-![](https://raw.githubusercontent.com/VictorXXXXX/Autoencoder/master/images/result1.png)
-![](https://raw.githubusercontent.com/VictorXXXXX/Autoencoder/master/images/result2.png)
-![](https://raw.githubusercontent.com/VictorXXXXX/Autoencoder/master/images/result3.png)
-![](https://raw.githubusercontent.com/VictorXXXXX/Autoencoder/master/images/result4.png)
-![](https://raw.githubusercontent.com/VictorXXXXX/Autoencoder/master/images/result5.png)
-![](https://raw.githubusercontent.com/VictorXXXXX/Autoencoder/master/images/result6.png)
+![](https://github.com/VictorXXXXX/Autoencoder/blob/master/image/result1.png)
+![](https://github.com/VictorXXXXX/Autoencoder/blob/master/image/result2.png)
+![](https://github.com/VictorXXXXX/Autoencoder/blob/master/image/result3.png)
+![](https://github.com/VictorXXXXX/Autoencoder/blob/master/image/result4.png)
+![](https://github.com/VictorXXXXX/Autoencoder/blob/master/image/result5.png)
+![](https://github.com/VictorXXXXX/Autoencoder/blob/master/image/result6.png)
 
 ### How the codings looks like?
 After training the model to finish the reconstruction task, I cut the decoder and used the encoder to fit the test data into lower dimension codings. Below is the correlation plot of the codings.
 
-![](https://raw.githubusercontent.com/VictorXXXXX/Autoencoder/master/images/corr.png)
+![](https://github.com/VictorXXXXX/Autoencoder/blob/master/image/corr.png)
 
 ## LSTM-Autoencoder
 
